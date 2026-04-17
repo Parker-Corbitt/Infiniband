@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Infiniband Web</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <canvas id="gameCanvas" aria-label="Infiniband game canvas"></canvas>
+
+    <div class="hud">
+      <div class="hud-left">
+        <div id="titleLabel" class="title">Open Spotify</div>
+        <div id="subtitleLabel" class="subtitle">Launch Spotify and start a track.</div>
+        <div id="statsLabel" class="stats">Tempo 118 BPM   Difficulty 34%   Distance 0m   Songs 0   Paused</div>
+      </div>
+
+      <div class="hud-right">
+        <div id="spectrumBars" class="bars" aria-label="Spectrum bars"></div>
+      </div>
+
+      <div id="hintLabel" class="hint">Jump Short: A / Click / Tap   Jump Tall: F   Toggle Spotify: P   Restart: R</div>
+      <div id="gameOverLabel" class="game-over" aria-live="polite"></div>
+    </div>
+
+    <aside class="spotify-panel" aria-label="Spotify settings">
+      <div class="panel-title">Spotify Browser Link</div>
+      <div class="panel-actions panel-actions-primary">
+        <button id="connectSpotifyButton" type="button">Connect</button>
+        <button id="disconnectSpotifyButton" type="button">Disconnect</button>
+      </div>
+
+      <div class="panel-actions">
+        <button id="toggleSpotifyButton" type="button">Play/Pause</button>
+      </div>
+
+      <p class="panel-note">Spotify Client ID is configured in <code>web/app.js</code>. Redirect URI must match this page URL exactly.</p>
+      <p id="spotifyStatus" class="panel-status">Not connected</p>
+    </aside>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+{
+  "name": "infiniband-web",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Browser version of Infiniband",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
